@@ -32,11 +32,12 @@ $wgExtensionCredits['specialpage'][] = array(
         'author' => 'Nathan Larson',
         'url' => 'https://mediawiki.org/wiki/Extension:GoToShell',
         'descriptionmsg' => 'gotoshell-desc',
-        'version' => '1.0.0'
+        'version' => '1.0.1'
 );
  
 $wgGoToShellCommand = 'ls';
 $wgExtensionMessagesFiles['GoToShell'] = __DIR__ . '/GoToShell.i18n.php';
+$wgMessagesDirs['GoToShell'] = __DIR__ . '/i18n';
 $wgAutoloadClasses['SpecialGoToShell'] = __DIR__ . '/SpecialGoToShell.php';
 $wgSpecialPages['GoToShell'] = 'SpecialGoToShell';
 $wgSpecialPageGroups['GoToShell'] = 'other';
