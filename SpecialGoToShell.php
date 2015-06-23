@@ -28,5 +28,9 @@ class SpecialGoToShell extends SpecialPage {
          $viewOutput->addWikiText( $output  );
       }
    }
+
+	protected function getGroupName() {
+		return 'other';
+	}
 }
 
