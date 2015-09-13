@@ -36,7 +36,6 @@ $wgExtensionCredits['specialpage'][] = array(
 );
  
 $wgGoToShellCommand = 'ls';
-$wgExtensionMessagesFiles['GoToShell'] = __DIR__ . '/GoToShell.i18n.php';
 $wgMessagesDirs['GoToShell'] = __DIR__ . '/i18n';
 $wgAutoloadClasses['SpecialGoToShell'] = __DIR__ . '/SpecialGoToShell.php';
 $wgSpecialPages['GoToShell'] = 'SpecialGoToShell';
