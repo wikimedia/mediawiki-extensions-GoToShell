@@ -37,8 +37,8 @@ $wgExtensionCredits['specialpage'][] = array(
  
 $wgGoToShellCommand = 'ls';
 $wgMessagesDirs['GoToShell'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['GoToShellAlias'] = __DIR__ . '/GoToShell.alias.php';
 $wgAutoloadClasses['SpecialGoToShell'] = __DIR__ . '/SpecialGoToShell.php';
 $wgSpecialPages['GoToShell'] = 'SpecialGoToShell';
 // All these bureaucrats can go to shell for all we care
 $wgGroupPermissions['bureaucrat']['gotoshell'] = true;
-
