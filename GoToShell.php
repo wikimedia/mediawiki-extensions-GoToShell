@@ -42,3 +42,4 @@ $wgAutoloadClasses['SpecialGoToShell'] = __DIR__ . '/SpecialGoToShell.php';
 $wgSpecialPages['GoToShell'] = 'SpecialGoToShell';
 // All these bureaucrats can go to shell for all we care
 $wgGroupPermissions['bureaucrat']['gotoshell'] = true;
+$wgAvailableRights[] = 'gotoshell';
