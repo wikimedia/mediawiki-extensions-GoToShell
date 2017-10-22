@@ -1,0 +1,8 @@
+{
+	"@metadata": {},
+	"gotoshell": "{{name}}",
+	"gotoshell-desc": "{{desc|name=GoToShell|url=https://www.mediawiki.org/wiki/Extension:GoToShell}}",
+	"gotoshell-notallowed": "An error message",
+	"gotoshell-command": "A label message",
+	"gotoshell-result": "A label message"
+}
