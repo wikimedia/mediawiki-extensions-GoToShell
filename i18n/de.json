@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"gotoshell": "Gehe zu Shell",
+	"gotoshell-desc": "Implementiert [[Special:GoToShell|eine Spezialseite]], die den Benutzer zur Shell und wieder zurück bringt.",
+	"gotoshell-notallowed": "Dein Benutzerkonto hat nicht die Berechtigung, zur Shell zu gehen.",
+	"gotoshell-command": "Befehl:",
+	"gotoshell-result": "Ergebnis:"
+}
