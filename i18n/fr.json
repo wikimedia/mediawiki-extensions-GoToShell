@@ -4,6 +4,8 @@
 			"Wladek92"
 		]
 	},
+	"gotoshell": "Aller à la console",
+	"gotoshell-notallowed": "Votre compte ne permet pas d'ouvrir une console système.",
 	"gotoshell-command": "Commande :",
 	"gotoshell-result": "Résultat :"
 }
