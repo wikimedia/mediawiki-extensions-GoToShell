@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wladek92"
+			"Wladek92",
+			"Gomoko"
 		]
 	},
 	"gotoshell": "Aller à la console",
+	"gotoshell-desc": "Implémente [[Special:GoToShell|une page spéciale]] qui amène l’utilisateur à l’invite de commande et en revient",
 	"gotoshell-notallowed": "Votre compte ne permet pas d'ouvrir une console système.",
 	"gotoshell-command": "Commande :",
 	"gotoshell-result": "Résultat :"
