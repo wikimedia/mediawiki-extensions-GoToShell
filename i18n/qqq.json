@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Liuxinyu970226"
 		]
 	},
 	"gotoshell": "{{name}}",
 	"gotoshell-desc": "{{desc|name=GoToShell|url=https://www.mediawiki.org/wiki/Extension:GoToShell}}",
 	"gotoshell-notallowed": "An error message",
-	"gotoshell-command": "A label message",
+	"gotoshell-command": "A label message\n{{Identical|Command}}",
 	"gotoshell-result": "A label message\n{{Identical|Result}}"
 }
