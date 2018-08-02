@@ -1,13 +1,16 @@
 <?php
+
+use MediaWiki\Shell\Shell;
+
 if ( !defined( 'MEDIAWIKI' ) ) {
    die( 'This file is a MediaWiki extension. It is not a valid entry point' );
 }
- 
+
 class SpecialGoToShell extends SpecialPage {
    function __construct( ) {
       parent::__construct( 'GoToShell' );
    }
- 
+
    function execute( $par ) {
       global $wgGoToShellCommand;
       $user = $this->getUser();
@@ -18,19 +21,39 @@ class SpecialGoToShell extends SpecialPage {
             'gotoshell-notallowed' ) ) );
       }
       $this->setHeaders();
-      $viewOutput = $this->getOutput();
-      $viewOutput->addWikiText ( "<big>'''" . wfMessage( 'gotoshell-command' )
+      $this->getOutput()->addWikiText ( "<big>'''" . wfMessage( 'gotoshell-command' )
          . "'''</big><br>$wgGoToShellCommand<br><br>"
          . "<big>'''" . wfMessage ( 'gotoshell-result' ) . "'''</big><br>" );
       // To shell with this user!
-      exec ( $wgGoToShellCommand, $outputs );
-      foreach ( $outputs as $output ) {
-         $viewOutput->addWikiText( $output  );
+      // Some shell commands (ex. mediawiki maintenance scripts) might write to both stdout and
+      // stderr. Capture and output both, with errors before normal output for greater visibility.
+      if ( Shell::isDisabled() ) {
+         $this->getOutput()->addWikiText( wfMessage( 'gotoshell-disabled' ) );
+      } else {
+         $result = Shell::command( [] )
+            ->unsafeParams( $wgGoToShellCommand )
+            ->restrict( Shell::RESTRICT_NONE )
+            ->execute();
+
+         $this->processOutput( $result->getStderr() );
+         $this->processOutput( $result->getStdout() );
       }
    }
 
-	protected function getGroupName() {
-		return 'other';
-	}
+   /**
+    * @param $rawOutput
+    * @throws MWException
+    */
+   protected function processOutput( $rawOutput ) {
+      if ( $rawOutput ) {
+         foreach ( explode( "\n", $rawOutput ) as $line ) {
+            $this->getOutput()->addWikiText( $line );
+         }
+      }
+   }
+
+   protected function getGroupName() {
+      return 'other';
+   }
 }
 
