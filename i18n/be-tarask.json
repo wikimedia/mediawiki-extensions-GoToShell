@@ -7,6 +7,7 @@
 	"gotoshell": "Перайсьці ў кансоль",
 	"gotoshell-desc": "Рэалізуе [[Special:GoToShell|спэцыяльную старонку]], якая дазваляе перамяшчацца ўдзельніку ў кансоль і назад",
 	"gotoshell-notallowed": "Ваш рахунак ня мае дазволу на пераход у кансоль.",
+	"gotoshell-disabled": "Немагчыма запусьціць вонкавыя праграмы, proc_open() адключаны.",
 	"gotoshell-command": "Каманда:",
 	"gotoshell-result": "Вынік:"
 }

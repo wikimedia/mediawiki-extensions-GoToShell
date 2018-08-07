@@ -4,9 +4,11 @@
 			"Hamilton Abreu"
 		]
 	},
-	"gotoshell": "Ir para a shell",
-	"gotoshell-desc": "Implementa [[Special:GoToShell|uma página especial]] que leva o utilizador à shell e de volta",
-	"gotoshell-notallowed": "A sua conta não tem permissão para entrar na shell.",
+	"gotoshell": "Ir para a ''shell''",
+	"gotoshell-desc": "Implementa [[Special:GoToShell|uma página especial]] que leva o utilizador à ''shell'' e de volta",
+	"gotoshell-notallowed": "A sua conta não tem permissão para entrar na ''shell''.",
+	"gotoshell-disabled": "Não é possível executar programas externos, o procedimento proc_open() está desativado.",
 	"gotoshell-command": "Comando:",
-	"gotoshell-result": "Resultado:"
+	"gotoshell-result": "Resultado:",
+	"right-gotoshell": "Executar comandos da ''shell'' através da página especial GoToShell"
 }
