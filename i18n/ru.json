@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wirbel78"
+			"Wirbel78",
+			"Vlad5250"
 		]
 	},
+	"gotoshell-disabled": "Невозможно запускать внешние программы, поскольку proc_open() отключено.",
 	"gotoshell-command": "Команда:",
 	"gotoshell-result": "Результат:"
 }

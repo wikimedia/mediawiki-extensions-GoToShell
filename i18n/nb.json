@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"gotoshell-disabled": "Kunne ikke kjøre eksterne programmer, proc_open() er slått av.",
+	"right-gotoshell": "Kjør shell-kommandoer via spesialsiden GoToShell"
+}

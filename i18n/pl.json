@@ -4,6 +4,7 @@
 			"Chrumps"
 		]
 	},
+	"gotoshell-disabled": "Nie można uruchomić programów zewnętrznych, proc_open() jest wyłączony.",
 	"gotoshell-command": "Komenda:",
 	"gotoshell-result": "Wynik:"
 }
