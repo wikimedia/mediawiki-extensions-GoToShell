@@ -7,6 +7,8 @@
 	"gotoshell": "Dir a la consola",
 	"gotoshell-desc": "Produz [[Special:GoToShell|una páxina especial]] que lleva al usuariu a la consola y de vuelta",
 	"gotoshell-notallowed": "La to cuenta nun tien permisu pa utilizar la consola.",
+	"gotoshell-disabled": "Nun pueden executase programes esternos, proc_open() ta desactiváu.",
 	"gotoshell-command": "Comandu:",
-	"gotoshell-result": "Resultancia:"
+	"gotoshell-result": "Resultancia:",
+	"right-gotoshell": "Executar comandos de la shell usando la páxina especial GoToShell"
 }
