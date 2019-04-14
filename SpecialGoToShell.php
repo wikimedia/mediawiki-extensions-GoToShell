@@ -21,14 +21,14 @@ class SpecialGoToShell extends SpecialPage {
             'gotoshell-notallowed' ) ) );
       }
       $this->setHeaders();
-      $this->getOutput()->addWikiText ( "<big>'''" . wfMessage( 'gotoshell-command' )
+      $this->outputWikiText( "<big>'''" . wfMessage( 'gotoshell-command' )
          . "'''</big><br>$wgGoToShellCommand<br><br>"
          . "<big>'''" . wfMessage ( 'gotoshell-result' ) . "'''</big><br>" );
       // To shell with this user!
       // Some shell commands (ex. mediawiki maintenance scripts) might write to both stdout and
       // stderr. Capture and output both, with errors before normal output for greater visibility.
       if ( Shell::isDisabled() ) {
-         $this->getOutput()->addWikiText( wfMessage( 'gotoshell-disabled' ) );
+         $this->outputWikiText( wfMessage( 'gotoshell-disabled' ) );
       } else {
          $result = Shell::command( [] )
             ->unsafeParams( $wgGoToShellCommand )
@@ -47,8 +47,18 @@ class SpecialGoToShell extends SpecialPage {
    protected function processOutput( $rawOutput ) {
       if ( $rawOutput ) {
          foreach ( explode( "\n", $rawOutput ) as $line ) {
-            $this->getOutput()->addWikiText( $line );
+            $this->outputWikiText( $line );
          }
+      }
+   }
+
+   private function outputWikiText( $wikitext ) {
+      $output = $this->getOutput();
+      if ( method_exists( $output, 'addWikiTextAsInterface' ) ) {
+         // MW 1.32+
+         $output->addWikiTextAsInterface( $wikitext );
+      } else {
+         $output->addWikiText( $wikitext );
       }
    }
 
