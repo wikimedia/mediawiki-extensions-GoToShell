@@ -10,5 +10,6 @@
 	"gotoshell-disabled": "Unable to run external programs, proc_open() is disabled.",
 	"gotoshell-command": "Command:",
 	"gotoshell-result": "Result:",
+	"action-gotoshell": "execute shell commands via the GoToShell special page",
 	"right-gotoshell": "Execute shell commands via the GoToShell special page"
 }
