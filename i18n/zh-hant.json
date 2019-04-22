@@ -11,5 +11,6 @@
 	"gotoshell-disabled": "無法運作外部程式，proc_open()為停用狀態。",
 	"gotoshell-command": "命令：",
 	"gotoshell-result": "結果：",
+	"action-gotoshell": "透過 GoToShell 特殊頁面來執行 shell 指令",
 	"right-gotoshell": "透過 GoToShell 特殊頁面來執行 shell 指令"
 }

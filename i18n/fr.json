@@ -11,5 +11,6 @@
 	"gotoshell-disabled": "Impossible d’exécuter des programmes externes, proc_open() est désactivé.",
 	"gotoshell-command": "Commande :",
 	"gotoshell-result": "Résultat :",
+	"action-gotoshell": "exécutez les commandes du shell via la page spéciale GoToShell",
 	"right-gotoshell": "Exécuter des commandes shell via la page spéciale GoToShell"
 }
