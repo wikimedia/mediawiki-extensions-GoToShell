@@ -10,5 +10,6 @@
 	"gotoshell-disabled": "Non ge se ponne eseguì programme de fore, proc_open() jè inattive.",
 	"gotoshell-command": "Comande:",
 	"gotoshell-result": "Resultate:",
+	"action-gotoshell": "esegue le cumande d'a shell ausanne 'a pàgena speciale GoToShell",
 	"right-gotoshell": "Eseguie le comande d'a shell ausanne 'a pàgena speciale GoToShell"
 }
