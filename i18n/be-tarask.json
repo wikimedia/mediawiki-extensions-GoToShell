@@ -10,5 +10,6 @@
 	"gotoshell-disabled": "Немагчыма запусьціць вонкавыя праграмы, proc_open() адключаны.",
 	"gotoshell-command": "Каманда:",
 	"gotoshell-result": "Вынік:",
+	"action-gotoshell": "выкананьне камандаў кансолі праз спэцыяльную старонку GoToShell",
 	"right-gotoshell": "Выкананьне камандаў кансолі праз спэцыяльную старонку GoToShell"
 }
