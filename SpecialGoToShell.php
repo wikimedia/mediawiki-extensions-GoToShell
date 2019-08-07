@@ -2,10 +2,6 @@
 
 use MediaWiki\Shell\Shell;
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-   die( 'This file is a MediaWiki extension. It is not a valid entry point' );
-}
-
 class SpecialGoToShell extends SpecialPage {
    function __construct( ) {
       parent::__construct( 'GoToShell' );
