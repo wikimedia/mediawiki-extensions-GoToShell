@@ -10,5 +10,6 @@
 	"gotoshell-disabled": "Nun pueden executase programes esternos, proc_open() ta desactiváu.",
 	"gotoshell-command": "Comandu:",
 	"gotoshell-result": "Resultancia:",
+	"action-gotoshell": "executar comandos de la shell usando la páxina especial GoToShell",
 	"right-gotoshell": "Executar comandos de la shell usando la páxina especial GoToShell"
 }
