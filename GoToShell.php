@@ -20,26 +20,18 @@
  * @file
  * @ingroup Extensions
  */
- 
-if( !defined( 'MEDIAWIKI' ) ) {
-        echo( "This file is an extension to the MediaWiki software and cannot be used standalone.\n" );
-        die( 1 );
+
+if ( function_exists( 'wfLoadExtension' ) ) {
+	wfLoadExtension( 'GoToShell' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['GoToShell'] = __DIR__ . '/i18n';
+	$wgExtensionMessagesFiles['GoToShellAlias'] = __DIR__ . '/GoToShell.alias.php';
+	wfWarn(
+		'Deprecated PHP entry point used for GoToShell extension. ' .
+		'Please use wfLoadExtension instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	);
+	return;
+} else {
+	die( 'This version of the GoToShell extension requires MediaWiki 1.29+' );
 }
- 
-$wgExtensionCredits['specialpage'][] = array(
-        'path' => __FILE__,
-        'name' => 'GoToShell',
-        'author' => 'Nathan Larson',
-        'url' => 'https://mediawiki.org/wiki/Extension:GoToShell',
-        'descriptionmsg' => 'gotoshell-desc',
-        'version' => '1.0.1'
-);
- 
-$wgGoToShellCommand = 'ls';
-$wgMessagesDirs['GoToShell'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['GoToShellAlias'] = __DIR__ . '/GoToShell.alias.php';
-$wgAutoloadClasses['SpecialGoToShell'] = __DIR__ . '/SpecialGoToShell.php';
-$wgSpecialPages['GoToShell'] = 'SpecialGoToShell';
-// All these bureaucrats can go to shell for all we care
-$wgGroupPermissions['bureaucrat']['gotoshell'] = true;
-$wgAvailableRights[] = 'gotoshell';
