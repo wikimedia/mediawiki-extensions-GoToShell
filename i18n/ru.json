@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Diman Russkov",
 			"Vlad5250",
 			"Wirbel78"
 		]
@@ -11,5 +12,6 @@
 	"gotoshell-disabled": "Невозможно запускать внешние программы, поскольку proc_open() отключено.",
 	"gotoshell-command": "Команда:",
 	"gotoshell-result": "Результат:",
+	"action-gotoshell": "Выполнение команд оболочки через служебную страницу GoToShell",
 	"right-gotoshell": "Выполнение команд оболочки через служебную страницу GoToShell"
 }
