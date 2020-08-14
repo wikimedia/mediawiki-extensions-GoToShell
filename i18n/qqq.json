@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"Robby"
+			"Robby",
+			"Umherirrender"
 		]
 	},
-	"gotoshell": "{{name}}",
+	"gotoshell": "{{doc-special}}",
 	"gotoshell-desc": "{{desc|name=GoToShell|url=https://www.mediawiki.org/wiki/Extension:GoToShell}}",
 	"gotoshell-notallowed": "An error message",
 	"gotoshell-disabled": "Used as error message when server configuration prevents command execution",
