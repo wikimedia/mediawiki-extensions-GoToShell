@@ -3,23 +3,26 @@
 use MediaWiki\Shell\Shell;
 
 class SpecialGoToShell extends SpecialPage {
-	function __construct( ) {
+	public function __construct() {
 		parent::__construct( 'GoToShell' );
 	}
 
-	function execute( $par ) {
+	/**
+	 * @param string $par
+	 */
+	public function execute( $par ) {
 		global $wgGoToShellCommand;
 		$user = $this->getUser();
 		// Missing handbasket, er, permission
 		if ( !$user->isAllowed( 'gotoshell' ) ) {
 			// Shell no, this user won't go
-			throw new PermissionsError( null, array( array(
-				'gotoshell-notallowed' ) ) );
+			throw new PermissionsError( null, [ [
+				'gotoshell-notallowed' ] ] );
 		}
 		$this->setHeaders();
 		$this->outputWikiText( "<big>'''" . wfMessage( 'gotoshell-command' )
 			. "'''</big><br>$wgGoToShellCommand<br><br>"
-			. "<big>'''" . wfMessage ( 'gotoshell-result' ) . "'''</big><br>" );
+			. "<big>'''" . wfMessage( 'gotoshell-result' ) . "'''</big><br>" );
 		// To shell with this user!
 		// Some shell commands (ex. mediawiki maintenance scripts) might write to both stdout and
 		// stderr. Capture and output both, with errors before normal output for greater visibility.
@@ -37,7 +40,7 @@ class SpecialGoToShell extends SpecialPage {
 	}
 
 	/**
-	 * @param $rawOutput
+	 * @param ?string $rawOutput
 	 * @throws MWException
 	 */
 	protected function processOutput( $rawOutput ) {
@@ -48,6 +51,9 @@ class SpecialGoToShell extends SpecialPage {
 		}
 	}
 
+	/**
+	 * @param string $wikitext
+	 */
 	private function outputWikiText( $wikitext ) {
 		$output = $this->getOutput();
 		if ( method_exists( $output, 'addWikiTextAsInterface' ) ) {
@@ -58,8 +64,10 @@ class SpecialGoToShell extends SpecialPage {
 		}
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function getGroupName() {
 		return 'other';
 	}
 }
-

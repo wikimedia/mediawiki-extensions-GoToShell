@@ -6,10 +6,10 @@
  * @ingroup Extensions
  */
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English
  */
-$specialPageAliases['en'] = array(
-	'GoToShell' => array( 'GoToShell' ),
-);
+$specialPageAliases['en'] = [
+	'GoToShell' => [ 'GoToShell' ],
+];
